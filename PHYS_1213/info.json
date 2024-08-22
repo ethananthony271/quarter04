@@ -1,0 +1,20 @@
+{
+  "schedule": {
+    "start":        1100,
+    "end":          1200,
+    "days":         "Mon Wed Thu Fri"
+  },
+
+  "name": {
+    "title":        "University Physics III",
+    "short":        "PHYS 1213",
+    "code":         "PHYS",
+    "number":       "1213"
+  },
+
+  "bookmarks": {
+    "Canvas Homepage":       "https://canvas.du.edu/"
+  },
+
+  "hasLab":         false
+}
