@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+
+\input{../../xlatex/imports/preamble}
+
+\title{Lecture 003}
+\date{August 20, 2024}
+
+\begin{document}
+
+\subsection{Examples}
+
+\begin{example}
+  A car starts at rest, and then accelerates uniformly. After 5 seconds, it passes the 25
+  mater mark on the track. What is the car's acceleration?
+  \begin{tcolorbox}[
+    standard jigsaw, % Allows opacity
+    colframe=fg,
+    boxrule=0px,
+    opacityback=0,
+    sidebyside,
+    lefthand width=75px,
+    coltext=fg,
+  ]
+  \textbf{Known Values}
+  \begin{align*}
+    x_i &= 0m             \\
+    x_f &= 25m            \\
+    v_i &= 0 \frac{m}{s}  \\
+    t_i &= 0s             \\
+    t_f &= 5s             \\
+  \end{align*}
+  \tcblower
+  \begin{align*}
+    x_f &= x_{i}+v_{i}t+\frac{1}{2}at^{2} \\
+    25  &= 0+0(5-0)+\frac{1}{2}a(5-0)^{2} \\
+    25  &= 0+0+\frac{25}{2}a \\
+    \frac{1}{a}  &= \frac{25}{2 \cdot 25}
+    \\[5pt]
+    a  &= \frac{2 \cdot 25}{25}
+    \\[5pt]
+    a  &= 2 \frac{m}{s^2} \\
+  \end{align*}
+  \end{tcolorbox}
+\end{example}
+
+\begin{example}
+  The driver then releases the gas and slams on the brakes. She stops after traveling an
+  additional 15 $m$. What was the acceleration during the braking period?
+  \begin{tcolorbox}[
+    standard jigsaw, % Allows opacity
+    colframe=fg,
+    boxrule=0px,
+    opacityback=0,
+    sidebyside,
+    lefthand width=75px,
+    coltext=fg,
+  ]
+  \textbf{Known Values}
+  \begin{align*}
+    x_i &= 0m                \\
+    x_f &= 25m               \\
+    v_i &= 0 \frac{m}{s}     \\
+    a   &= 2 \frac{m}{s^2}   \\
+    t_i &= 0s                \\
+    t_f &= 5s
+  \end{align*}
+  \tcblower
+  At the time the brakes are engaged, what is the velocity?
+  \begin{align*}
+    v_f &= v_i+at         \\
+    v_f &= 0+2 \cdot 5    \\
+    v_f &= 10 \frac{m}{s}
+  \end{align*}
+  What is the acceleration if she travels 15 $m$ to go from $v=10$ to $v=0$?
+  \begin{align*}
+    v_f^2 &= v_i^2 + 2a(x_f-x_i)        \\
+    0^2   &= 10^2 + 2a(15)              \\
+    a     &= \frac{-(10^2)}{2 \cdot 15} \\
+    a     &= \frac{-100}{30}            \\
+    a     &= -3.33 \frac{m}{s^2}
+  \end{align*}
+  \end{tcolorbox}
+\end{example}
+
+\begin{example}
+  Earthquakes produce several types of shock waves. The most well-known are the P-waves 
+  (primary, or pressure), and the S-waves (secondary, or shear). In the Earth’s crust, 
+  P-waves travel at around $6.5 \frac{km}{s}$, while the S-waves move at about $3.5 \frac{km}{s}$. The time
+  delay between the arrival of these two waves at a seismic recording station tells 
+  geologists how far away the earthquake occurred. If this time delay is $33 s$, how far
+  from the seismic station did the Earthquake occur?
+
+  \begin{tcolorbox}[
+    standard jigsaw, % Allows opacity
+    colframe=fg,
+    boxrule=0px,
+    opacityback=0,
+    sidebyside,
+    lefthand width=75px,
+    coltext=fg,
+  ]
+  \textbf{Known Values}
+  \begin{align*}
+    v_{\textup{p}}     &= 6.5 \frac{km}{s} \\
+    v_{\textup{s}}     &= 3.5 \frac{km}{s} \\
+    t_{\textup{delay}} &= 33 s
+  \end{align*}
+  \tcblower
+  \begin{align*}
+    x_f       &= x_i + v_it + \frac{1}{2}at^2 \\
+    x_f - x_i &= v_it + \frac{1}{2}at^2 \\ 
+    x         &= v_it
+  \end{align*}
+  How can we find $v_i$? Keeping in line with $t$ measuring the difference between the time for each wave, so can $v_i$ measure the difference between the velocities of both waves.
+  \begin{align*}
+    x &= (v_p-v_s)t  \\
+    x &= (6.5-3.5)33 \\
+    x &= 99km
+  \end{align*}
+  \end{tcolorbox}
+\end{example}
+
+\end{document}

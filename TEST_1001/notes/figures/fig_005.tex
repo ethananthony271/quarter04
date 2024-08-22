@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 005}
+\date{August 20, 2024}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.35]
+
+  \draw[draw=fg!25!pg] (0,-4) grid (12,4);
+  \draw[draw=fg, ultra thick, stealth-stealth] (0,-4.2) -- (0,4.2) node[anchor = south] {$x$};
+  \draw[draw=fg, ultra thick, -stealth] (0,0) -- (12.2,0) node[anchor = west] {$t$};
+
+  \draw[draw=ma!50, ultra thick] (0,-3) -- (11.5,4) node[anchor = south] {{\footnotesize Object $1$}};
+  \draw[draw=ma!50, ultra thick] (0,-0.5) -- (6,3.75) -- (12,-1.5) node[anchor = north] {{\footnotesize Object $2$}};
+
+  \draw[] (1,0) node[rotate = 0, anchor = north west] {{\tiny A}};
+  \draw[] (5,0) node[rotate = 0, anchor = north west] {{\tiny B}};
+  \draw[] (6,0) node[rotate = 0, anchor = north west] {{\tiny C}};
+  \draw[] (9,0) node[rotate = 0, anchor = north west] {{\tiny D}};
+  \draw[] (11,0) node[rotate = 0, anchor = north west] {{\tiny E}};
+
+\end{tikzpicture}
+\end{document}

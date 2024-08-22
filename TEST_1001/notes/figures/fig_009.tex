@@ -1,0 +1,50 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 009}
+\date{August 20, 2024}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \begin{axis}[
+    basicAxis,
+    xticklabels = {},
+    yticklabels = {},
+    ]
+    \addplot [
+      domain=-1:4.5,
+      samples=100,
+      color=ma!50,
+      thick,
+    ] {-x-((2*x)^2)+x^3};
+    \addplot [
+      domain=-1:1,
+      samples=2,
+      color=or!50,
+      thick,
+      dashed,
+      stealth-stealth,
+    ] {-1*x};
+    \addplot[
+      only marks,
+      mark=*,
+      color=or!50,
+    ] coordinates {(0,0)};
+    \addplot [
+      domain=2:4,
+      samples=2,
+      color=or!50,
+      thick,
+      dashed,
+      stealth-stealth,
+    ] {2*x-18};
+    \addplot[
+      only marks,
+      mark=*,
+      color=or!50,
+    ] coordinates {(3,-12)};
+  \end{axis}
+
+\end{tikzpicture}
+\end{document}

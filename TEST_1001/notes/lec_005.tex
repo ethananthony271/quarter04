@@ -1,0 +1,172 @@
+\documentclass[12pt]{article}
+
+\input{../../xlatex/imports/preamble}
+
+\title{Lecture 005}
+\date{August 20, 2024}
+
+\begin{document}
+
+\subsection{Units and Conversion}
+
+All measurements, in order to have any absolute significance, must be associated with a unit.
+To standardize the way units are used, there is the \textbf{SI System of Units}, providing
+a standard unit for every quantity.
+\\[12pt]
+The SI Base units are what every other unit is derived from. They are listed in full in
+Figure \ref{tbl:siBaseUnits}.
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{tblr}{lcc}
+      \toprule
+      \textbf{Base Quantity}    & \textbf{Name} & \textbf{Symbol} \\
+      \midrule
+      Length                    & meter         & m               \\
+      Mass                      & kilogram      & kg              \\
+      Time                      & second        & s               \\
+      Electric Current          & ampere        & A               \\
+      Thermodynamic Temperature & kelvin        & K               \\
+      Amount of Substance       & mole          & mol             \\
+      Luminous Intensity        & candela       & cd              \\
+      \bottomrule
+    \end{tblr}
+    \caption{SI Base Units}
+    \label{tbl:siBaseUnits}
+  \end{center}
+\end{figure}
+
+Using the SI Base Units, there is also a set of \textbf{SI Derived Units}, meaning that they are
+standard units that are created through combining the SI Base Units in different ways. They
+are listed in Figure \ref{tbl:siDerivedUnits}.
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{tblr}{lccc}
+      \toprule
+      \textbf{Derived Quantity} & \textbf{Name}  & \textbf{Symbol} & \textbf{Equivalent Base Units} \\
+      \midrule
+      Frequency                 & hertz          & Hz              & $s^{-1}$                       \\
+      Force                     & newtown        & N               & $\frac{m \cdot kg}{s^2}$       \\
+      Pressure                  & pascal         & Pa              & $\frac{N}{m^2}$                \\
+      Energy                    & joule          & J               & $N \cdot m$                    \\
+      Power                     & watt           & W               & $\frac{J}{s}$                  \\
+      Electric Charge           & coulomb        & C               & $s \cdot A$                    \\
+      Electric Potential        & volt           & V               & $\frac{W}{A}$                  \\
+      Electric Resistance       & ohm            & $\Omega$        & $\frac{V}{A}$                  \\
+      Celsius Temperature       & degree Celsius & $\celsius$      & $K$                            \\
+      \bottomrule
+    \end{tblr}
+    \caption{SI Derived Units}
+    \label{tbl:siDerivedUnits}
+  \end{center}
+\end{figure}
+
+Lastly, there is a set of \textbf{SI Unit Prefixes}, used to modify the magnitude of a unit.
+The range of prefixes is listed in Figure \ref{tbl:siPrefix}.
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{tblr}{lccl}
+      \toprule
+      \textbf{Factor} & \textbf{Name} & \textbf{Symbol} & \textbf{Numerical Value} \\
+      \midrule
+      $10^{12}$       & tera          & T               & $1\ 000\ 000\ 000\ 000$  \\
+      $10^{9}$        & giga          & G               & $1\ 000\ 000\ 000$       \\
+      $10^{6}$        & mega          & M               & $1\ 000\ 000$            \\
+      $10^{3}$        & kilo          & k               & $1\ 000$                 \\
+      $10^{2}$        & hecto         & h               & $100$                    \\
+      $10^{1}$        & deka          & da              & $10$                     \\
+      $10^{-1}$       & deci          & d               & $0.1$                    \\
+      $10^{-2}$       & centi         & c               & $0.01$                   \\
+      $10^{-3}$       & milli         & m               & $0.001$                  \\
+      $10^{-6}$       & micro         & $\mu$           & $0.000\ 001$             \\
+      $10^{-9}$       & nano          & n               & $0.000\ 000\ 001$        \\
+      $10^{-12}$      & pico          & p               & $0.000\ 000\ 000\ 001$   \\
+      \bottomrule
+    \end{tblr}
+    \caption{SI Unit Prefixes}
+    \label{tbl:siPrefix}
+  \end{center}
+\end{figure}
+
+\subsection{Vectors}
+
+\begin{definition}{Vector}
+  Any measurement that has both a \textbf{size} and a \textbf{direction}, such as velocity,
+  acceleration, displacement, position, force, momentum, etc.
+\end{definition}
+
+\begin{figure}[H]
+  \centering
+  \includestandalone{figures/fig_013}
+\caption{Components of Vectors}
+\label{fig:013}
+\end{figure}
+
+In Figure \ref{fig:013}, an object moves from $p_1$ to $p_2$, changing both its $x$ and $y$
+positions. It's vector displacement is northeast, but can also be represented as two
+component vectors, one moving east along the $x$-axis, and one moving north along the $y$-axis.
+\\
+Using trigonometry, the size of the components can be determined:
+\begin{formula}{Vector Components}
+  \begin{tcolorbox}[
+    standard jigsaw, % Allows opacity
+    colframe=fg,
+    boxrule=0px,
+    opacityback=0,
+    sidebyside,
+    lefthand width=0.43\textwidth,
+    coltext=fg,
+  ]
+  \begin{center}
+    \textbf{Vertical Component}
+  \end{center}
+  \begin{align*}
+    sin(\theta)         &= \frac{\textup{opposite}}{\textup{hypotenuse}} \\
+    sin(\theta)         &= \frac{D_y}{D} \\
+    D_y &= sin(\theta) \cdot D \\
+  \end{align*}
+  \tcblower
+  \begin{center}
+    \textbf{Horizontal Component}
+  \end{center}
+  \begin{align*}
+    cos(\theta)         &= \frac{\textup{adjacent}}{\textup{hypotenuse}} \\
+    cos(\theta)         &= \frac{D_x}{D} \\
+    D_x &= cos(\theta) \cdot D \\
+  \end{align*}
+  \end{tcolorbox}
+\end{formula}
+
+Multiple vectors can be added up. In essence, this is done by adding all like components
+with like components, then combining what components you have left.
+
+\begin{figure}[H]
+  \centering
+  \includestandalone{figures/fig_014}
+\caption{Combining Multiple Vectors}
+\label{fig:014}
+\end{figure}
+
+Just as you can add vectors, so too can you multiply them. Multiplying a vector by a constant
+scales the magnitude of the vector by that constant without affecting the direction of it.
+\\
+Lastly, notation. Notation for a vector requires that an $\overrightarrow{\textup{arrow}}$ is put over
+any vector variable to show that it's a vector. If instead of an arrow, there's a $\widehat{\textup{hat}}$ on
+the vector, that means it's a unit vector.
+
+\begin{definition}{Unit Vector}
+  A unit vector is one with a magnitude of 1, used to signify a direction without really
+  affecting the magnitude. They are usually represented by $\hat{x}$, $\hat{y}$, and $\hat{z}$ to point in their
+  respective directions. Or by $\hat{i}$, $\hat{j}$, and $\hat{k}$ instead.
+\end{definition}
+
+The example in Figure \ref{fig:013} can be written out in terms of its components using unit
+vectors.
+
+\begin{equation*}
+  \overrightarrow{D}=D_x\hat{i}+D_y\hat{j}
+\end{equation*}
+
+\end{document}

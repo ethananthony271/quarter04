@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+
+\input{../../xlatex/imports/preamble}
+
+\title{Lecture 004}
+\date{August 20, 2024}
+
+\begin{document}
+
+\newpage
+\section{Gravity}
+\subsection{Introduction to Gravity}
+
+All freely falling objects have the same downward acceleration. Freely falling means that
+gravity is the only force acting upon the object.
+
+\begin{formula}{Gravity on Earth}
+  \begin{equation*}
+    g=9.8 \frac{m}{s^2}
+  \end{equation*}
+\end{formula}
+
+\section{Fundamentals for Physics}
+
+\subsection{Calculus}
+
+\begin{wrapfigure}[8]{r}{0.5\textwidth}
+  \centering
+  \includestandalone{figures/fig_009}
+\caption{Derivative of a function}
+\label{fig:009}
+\end{wrapfigure}
+
+Calculus is used to measure rates of change of continuous process over a continuous range of
+time. Specific to kinematics, it is used to model motion of objects through time.
+
+\begin{definition}{Derivative}
+  A derivative of a function is the \textbf{rate of change} of that function.
+  \begin{gather*}
+    \textup{Derivative of}\ f(x) = f'(x) = \frac{df}{dx} \\
+    \frac{df}{dx} = \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x}
+  \end{gather*}
+\end{definition}
+
+In Figure \ref{fig:009}, there is a function with two lines running tangent to it at different
+points. These lines are the derivative of the function at the points they intersect, thus
+showing the instantaneous slope of the function. If this function represents an object's
+position over time, then the tangent lines would show the instantaneous velocity at a point
+in time.
+\\[12pt]
+As it relates to physics, position ($x$) and velocity ($v$) are related by $v=\frac{dx}{dt}$.
+In other words, $x'(t) = v(t)$.
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[H]{0.3\textwidth}
+    \centering
+    \includestandalone{figures/fig_010}
+    \caption{Position}
+    \label{fig:010}
+  \end{subfigure}
+  \begin{subfigure}[H]{0.3\textwidth}
+    \centering
+    \includestandalone{figures/fig_011}
+    \caption{Velocity}
+    \label{fig:011}
+  \end{subfigure}
+  \begin{subfigure}[H]{0.3\textwidth}
+    \centering
+    \includestandalone{figures/fig_012}
+    \caption{Acceleration}
+    \label{fig:012}
+  \end{subfigure}
+  \caption{Position, Velocity, and Acceleration}
+  \label{fig:posVelAcc}
+\end{figure}
+
+\end{document}

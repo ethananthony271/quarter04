@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 006}
+\date{August 20, 2024}
+
+\begin{document}
+\begin{tikzpicture}[scale = 0.5]
+
+  \draw[draw=fg!25!pg] (0,-4) grid (12,4);
+  \draw[draw=fg, ultra thick, stealth-stealth] (0,-4.2) -- (0,4.2) node[anchor = south] {$x$};
+  \draw[draw=fg, ultra thick, -stealth] (0,0) -- (12.2,0) node[anchor = west] {$t$};
+
+  \draw[draw=ma!50, ultra thick] (0,-0.5) -- (4,3.75) node[anchor = east] {\textbf{{\normalsize A}}} -- (8,-3.5) node[anchor = east] {\textbf{{\normalsize B}}} -- (12,-2.5) node[anchor = south west] {\textbf{{\normalsize C}}};
+  \draw[draw=ma!25, ultra thick, dotted] (0,-0.5) -- (12,-2.5);
+
+\end{tikzpicture}
+\end{document}

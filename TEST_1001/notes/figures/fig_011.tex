@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 010}
+\date{August 20, 2024}
+
+\begin{document}
+\begin{tikzpicture}[scale = 0.55]
+
+  \begin{axis}[
+    basicAxis,
+    title = {\LARGE $f'(x)$},
+    xlabel = {\Large time ($t$)},
+    xticklabels = {},
+    ylabel = {\Large velocity ($v$)},
+    yticklabels = {},
+    ]
+    \addplot [
+      domain=0:3,
+      samples=100,
+      color=ma!55,
+      ultra thick,
+    ] {2*x};
+  \end{axis}
+
+\end{tikzpicture}
+\end{document}

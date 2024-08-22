@@ -1,0 +1,20 @@
+{
+  "schedule": {
+    "start":        0000,
+    "end":          2359,
+    "days":         "Sat Sun"
+  },
+
+  "name": {
+    "title":        "Latex R&D",
+    "short":        "TEST 1001",
+    "code":         "TEST",
+    "number":       "1001"
+  },
+
+  "bookmarks": {
+    "Canvas Homepage":       "https://canvas.du.edu/"
+  },
+
+  "hasLab":         false
+}

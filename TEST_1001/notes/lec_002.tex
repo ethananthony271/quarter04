@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+
+\input{../../xlatex/imports/preamble}
+
+\title{Lecture 002}
+\date{August 20, 2024}
+
+\begin{document}
+
+If velocity is a measurement of the rate of change of position, what is the measurement
+of the rate of change of velocity?
+
+\begin{definition}{Acceleration}
+  Acceleration is a change in velocity over time. It is the measurement of the rate of
+  change of velocity.
+\end{definition}
+
+It is important to remember that, just like velocity, acceleration is also a vector meaning
+that is measures both a magnitude and a direction.
+
+\begin{formula}{Average Acceleration}
+  \begin{align*}
+    \textup{Average acceleration} &= \textup{change in velocity over time elapsed} \\
+    \textup{Average acceleration} &= \frac{\textup{change in velocity}}{\textup{time elapsed}} \\
+    \overrightarrow{a}            &= \frac{\Delta v}{\Delta t}
+  \end{align*}
+\end{formula}
+
+The direction of acceleration is the direction of the \textbf{change} of velocity. Notably,
+the direction of velocity has no bearing on the direction of acceleration. In Figure \ref{fig:007},
+the direction of acceleration is the same as the direction of velocity since the velocity
+is the velocity is going in the same direction from $t=1$ to $t=2$ and it increases in magnitude.
+
+In Figure \ref{fig:008}, the direction of acceleration is in the opposite direction of the
+velocity of the object since the magnitude of velocity at $t=2$ is less than the magnitude
+at $t=1$ but still in the same direction.
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[H]{0.4\textwidth}
+    \centering
+    \includestandalone{figures/fig_007}
+    \caption{Acceleration in the same direction of velocity}
+    \label{fig:007}
+  \end{subfigure}
+  \begin{subfigure}[H]{0.4\textwidth}
+    \centering
+    \includestandalone{figures/fig_008}
+    \caption{Acceleration in the opposite direction of velocity}
+    \label{fig:008}
+  \end{subfigure}
+  \caption{Acceleration vs. Velocity}
+  \label{fig:accVsVel}
+\end{figure}
+
+\subsection{Kinematics}
+
+\begin{definition}{Kinematics}
+  A branch of physics dedicated to describing the mechanics of motion.
+\end{definition}
+
+Assuming that we have constant acceleration, we can use \textbf{Kinematic Equations} to
+describe motion.
+
+\begin{formula}{Kinematic Equations}
+  \begin{align*}
+    v_{final} &= v_{initial}+a \cdot \Delta t                                                                            \\
+    v         &= v_{0}+a \cdot \Delta t                                                                                  \\
+  \end{align*}
+  \vspace{-25pt}
+  \hrule
+  \begin{align*}
+    x_{final} &= x_{initial}+v_{initial}\cdot (t_{final} - t_{initial})+\frac{1}{2}a \cdot (t_{final} - t_{initial})^{2} \\
+    x         &= x_{0}+v_{0}\cdot \Delta t+\frac{1}{2}a \cdot \Delta t^{2}                                               \\
+  \end{align*}
+  \vspace{-25pt}
+  \hrule
+  \begin{align*}
+    v_{final}^{2} &= v_{initial}^{2}+2a(x_{final}-x_{initial})                                                           \\
+    v^{2}         &= v_{0}^{2}+2a(x-x_{0})                                                                               \\
+  \end{align*}
+  \vspace{-35pt}
+\end{formula}
+
+\end{document}

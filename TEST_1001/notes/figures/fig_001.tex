@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 001}
+\date{August 20, 2024}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.75]
+  \draw[draw=fg, thick] (-1.5,-1) rectangle (6.5,0.75);
+
+  \draw[draw=fg, thick, stealth-stealth] (-1,0) -- (6,0);
+
+  \foreach \x in {0,1,...,5} {
+    \draw[draw=fg] (\x,-0.25) node[anchor = north] {$\x$} -- (\x,0.25);
+  }
+
+  \filldraw[fill=ma!50, draw=ma!50] (2.5,0) circle (5px);
+
+\end{tikzpicture}
+\end{document}

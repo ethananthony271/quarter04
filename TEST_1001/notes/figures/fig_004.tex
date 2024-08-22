@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 004}
+\date{August 20, 2024}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.75]
+  \draw[draw=fg, thick] (-1.5,-1) rectangle (6.5,1.25);
+
+  \draw[draw=fg, thick, stealth-stealth] (-1,0) -- (6,0);
+
+  \foreach \x in {0,1,...,5} {
+    \pgfmathsetmacro{\p}{(\x + 3)}
+    \draw[draw=fg] (\x,-0.25) node[anchor = north] {$\p$} -- (\x,0.25);
+  }
+
+  \filldraw[fill=ma!50, draw=ma!50] (0,0.75) circle (5px);
+  \draw[thick, draw=fg, -stealth, dotted] (0.65,0.75) -- (3.35,0.75);
+  \filldraw[fill=ma!50, draw=ma!50] (4,0.75) circle (5px);
+
+  \filldraw[fill=ma!50, draw=ma!50] (0,0.25) circle (5px);
+  \draw[thick, draw=fg, -stealth, dotted] (1.35,0.25) -- (0.65,0.25);
+  \filldraw[fill=ma!50, draw=ma!50] (2,0.25) circle (5px);
+
+\end{tikzpicture}
+\end{document}

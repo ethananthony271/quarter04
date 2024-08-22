@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 007}
+\date{August 20, 2024}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \draw[draw=fg, thick] (-1.5,0.5) rectangle (3.5,2.5);
+
+  \filldraw[fill=ma!50, draw=ma!50] (0,2) node[anchor = east, xshift = -5px] {$t=1$} circle (5px);
+  \filldraw[fill=ma!50, draw=ma!50] (0,1) node[anchor = east, xshift = -5px] {$t=2$} circle (5px);
+
+  \draw[draw=fg, thick, -stealth] (0.5,2) -- (1.5,2) node[anchor = west] {$\overrightarrow{v}_1$};
+  \draw[draw=fg, thick, -stealth] (0.5,1) -- (2.5,1) node[anchor = west] {$\overrightarrow{v}_2$};
+
+\end{tikzpicture}
+\end{document}
