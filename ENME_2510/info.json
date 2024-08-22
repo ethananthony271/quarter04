@@ -1,0 +1,23 @@
+{
+  "schedule": {
+    "start":        1200,
+    "end":          1300,
+    "days":         "Mon Wed Thu Fri",
+    "labStart":     1600,
+    "labEnd":       1800,
+    "labDays":      "Tue"
+  },
+
+  "name": {
+    "title":        "Statics",
+    "short":        "ENME 2510",
+    "code":         "ENME",
+    "number":       "2510"
+  },
+
+  "bookmarks": {
+    "Canvas Homepage":       "https://canvas.du.edu/"
+  },
+
+  "hasLab":       true
+}
