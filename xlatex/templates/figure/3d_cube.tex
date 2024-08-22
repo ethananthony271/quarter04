@@ -1,0 +1,54 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{3D Cube}
+\date{}
+
+\begin{document}
+\tdplotsetmaincoords{75}{20} % Left Tilt
+% \tdplotsetmaincoords{75}{160} % Right Tilt
+\begin{tikzpicture}
+  [tdplot_main_coords]
+
+  % 3D Rectangular Prism
+  \def \x {0}
+  \def \xLen {3}
+  \def \y {0}
+  \def \yLen {3}
+  \def \z {0}
+  \def \zLen {1}
+  \def \gridStep {0.5}
+
+  \pgfmathsetmacro \xi {\x - \gridStep}
+  \pgfmathsetmacro \xf {\xLen + \gridStep}
+  \pgfmathsetmacro \yi {\y - \gridStep}
+  \pgfmathsetmacro \yf {\yLen + \gridStep}
+  \pgfmathsetmacro \negGridStep {\gridStep * -1}
+  \foreach \a in {\xi,\x,...,\xf} {
+    \foreach \b in {\yi,\y,...,\yf} {
+      \draw[gridLine] (\a,\yi,\z) -- (\a,\yf,\z);
+      \draw[gridLine] (\xi,\b,\z) -- (\xf,\b,\z);
+    }
+  }
+
+  \pgfmathsetmacro \X {\x + \xLen}
+  \pgfmathsetmacro \Y {\y + \yLen}
+  \pgfmathsetmacro \Z {\z + \zLen}
+  \draw[cubeBorder] (\x,\Y,\z) -- (\x,\Y,\Z) -- (\X,\Y,\Z) -- (\X,\Y,\z) -- cycle;
+  \fill[cubeFilling] (\x,\Y,\z) -- (\x,\Y,\Z) -- (\X,\Y,\Z) -- (\X,\Y,\z) -- cycle;
+  \draw[cubeBorder] (\x,\y,\z) -- (\x,\Y,\z) -- (\X,\Y,\z) -- (\X,\y,\z) -- cycle;
+  \fill[cubeFilling] (\x,\y,\z) -- (\x,\Y,\z) -- (\X,\Y,\z) -- (\X,\y,\z) -- cycle;
+  \draw[cubeBorder] (\x,\y,\z) -- (\x,\Y,\z) -- (\x,\Y,\Z) -- (\x,\y,\Z) -- cycle;
+  \fill[cubeFilling] (\x,\y,\z) -- (\x,\Y,\z) -- (\x,\Y,\Z) -- (\x,\y,\Z) -- cycle;
+
+
+
+  \draw[cubeBorder] (\X,\y,\z) -- (\X,\y,\Z) -- (\X,\Y,\Z) -- (\X,\Y,\z) -- cycle;
+  \fill[cubeFilling] (\X,\y,\z) -- (\X,\y,\Z) -- (\X,\Y,\Z) -- (\X,\Y,\z) -- cycle;
+  \draw[cubeBorder] (\x,\y,\Z) -- (\x,\Y,\Z) -- (\X,\Y,\Z) -- (\X,\y,\Z) -- cycle;
+  \fill[cubeFilling] (\x,\y,\Z) -- (\x,\Y,\Z) -- (\X,\Y,\Z) -- (\X,\y,\Z) -- cycle;
+  \draw[cubeBorder] (\x,\y,\z) -- (\x,\y,\Z) -- (\X,\y,\Z) -- (\X,\y,\z) -- cycle;
+  \fill[cubeFilling] (\x,\y,\z) -- (\x,\y,\Z) -- (\X,\y,\Z) -- (\X,\y,\z) -- cycle;
+
+\end{tikzpicture}
+\end{document}

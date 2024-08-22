@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Left Quadrant Graph}
+\date{}
+
+\begin{document}
+\begin{tikzpicture}
+  % Left Quadrants Graph
+  \def \xNegLen {5}
+  \def \yPosLen {5}
+  \def \yNegLen {5}
+  \def \xOrigin {0}
+  \def \yOrigin {0}
+  \pgfmathsetmacro \xnf {\xOrigin - \xNegLen}
+  \pgfmathsetmacro \ypf {\yOrigin + \yPosLen}
+  \pgfmathsetmacro \ynf {\yOrigin - \yNegLen}
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xnf,\yOrigin) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xOrigin,\ypf) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xOrigin,\ynf) ;
+\end{tikzpicture}
+\end{document}

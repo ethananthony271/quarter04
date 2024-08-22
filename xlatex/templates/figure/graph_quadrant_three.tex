@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Quadrant Three Graph}
+\date{}
+
+\begin{document}
+\begin{tikzpicture}
+  % Quadrant Three Graph
+  \def \xLen {5}
+  \def \yLen {5}
+  \def \xOrigin {0}
+  \def \yOrigin {0}
+  \pgfmathsetmacro \xf {\xOrigin + (\xLen * -1)}
+  \pgfmathsetmacro \yf {\yOrigin + (\yLen * -1)}
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xOrigin,\yf) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xf,\yOrigin) ;
+
+\end{tikzpicture}
+\end{document}

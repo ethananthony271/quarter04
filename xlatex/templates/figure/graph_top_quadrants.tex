@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Top Quadrant Graph}
+\date{}
+
+\begin{document}
+\begin{tikzpicture}
+  % Top Quadrants Graph
+  \def \xPosLen {5}
+  \def \xNegLen {5}
+  \def \yPosLen {5}
+  \def \xOrigin {0}
+  \def \yOrigin {0}
+  \pgfmathsetmacro \xpf {\xOrigin + \xPosLen}
+  \pgfmathsetmacro \xnf {\xOrigin - \xNegLen}
+  \pgfmathsetmacro \ypf {\yOrigin + \yPosLen}
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xpf,\yOrigin) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xnf,\yOrigin) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xOrigin,\ypf) ;
+\end{tikzpicture}
+\end{document}

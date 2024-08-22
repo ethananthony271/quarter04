@@ -1,0 +1,171 @@
+%%%% GRAPHICS %%%%
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{tikz-3dplot}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+  \pgfplotsset{compat=1.18}
+
+%%%% FIGURES %%%%
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage[skip=5pt, font=footnotesize]{caption}
+
+%%%% FORMATTING %%%%
+\usepackage{tcolorbox}
+\usepackage{ulem}
+
+%%%% TABLE FORMATTING %%%%
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+%%%% MATH AND LOGIC %%%%
+\usepackage{xifthen}
+\usepackage{amsmath}
+
+%%%% TEXT AND SYMBOLS %%%%
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+%%%% OTHER %%%%
+\usepackage{standalone}
+
+%%%% STYLES %%%%
+
+% Packages
+\usepackage{fullpage}
+\usepackage{titlesec}
+\usepackage[rgb]{xcolor}
+\selectcolormodel{natural}
+\usepackage{ninecolors}
+\selectcolormodel{rgb}
+\usepackage{darkmode}
+  \enabledarkmode
+% \usepackage{minted}
+% \IfDarkModeTF{\usemintedstyle{dracula}}{\usemintedstyle{igor}}
+
+% Colors
+\IfDarkModeTF{\definecolor{pg}{HTML}{283133}}{\definecolor{pg}{HTML}{FFFFFF}}
+\IfDarkModeTF{\definecolor{fg}{HTML}{FFFFFF}}{\definecolor{fg}{HTML}{000000}}
+\IfDarkModeTF{\definecolor{bg}{HTML}{000000}}{\definecolor{bg}{HTML}{FFFFFF}}
+\IfDarkModeTF{\definecolor{re}{HTML}{D20F39}}{\definecolor{re}{HTML}{D20F39}}
+\IfDarkModeTF{\definecolor{gr}{HTML}{40A02B}}{\definecolor{gr}{HTML}{40A02B}}
+\IfDarkModeTF{\definecolor{ye}{HTML}{DF8E1D}}{\definecolor{ye}{HTML}{DF8E1D}}
+\IfDarkModeTF{\definecolor{or}{HTML}{FE640B}}{\definecolor{or}{HTML}{FE640B}}
+\IfDarkModeTF{\definecolor{bl}{HTML}{1E66F5}}{\definecolor{bl}{HTML}{1E66F5}}
+\IfDarkModeTF{\definecolor{ma}{HTML}{8839EF}}{\definecolor{ma}{HTML}{8839EF}}
+\IfDarkModeTF{\definecolor{cy}{HTML}{209FB5}}{\definecolor{cy}{HTML}{209FB5}}
+\IfDarkModeTF{\definecolor{pi}{HTML}{EA76CB}}{\definecolor{pi}{HTML}{EA76CB}}
+
+\usepackage{nameref}
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+\titleformat{\section}
+  {\normalfont\scshape\Large\bfseries}
+  {\thesection}
+  {0.75em}
+  {}
+
+\titleformat{\subsection}
+  {\normalfont\scshape\large\bfseries}
+  {\thesubsection}
+  {0.75em}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalfont\scshape\normalsize\bfseries}
+  {\thesubsubsection}
+  {0.75em}
+  {}
+
+% Formula
+\newcounter{formula}[section]
+\newenvironment{formula}[1]{
+  \stepcounter{formula}
+  \begin{tcolorbox}[
+    standard jigsaw, % Allows opacity
+    colframe={\IfDarkModeTF{white}{black}},
+    boxrule=1px,
+    colback=black,
+    opacityback=0,
+    sharp corners,
+    sidebyside,
+    righthand width=18px,
+    coltext={\IfDarkModeTF{white}{black}}
+  ]
+  \centering
+  \textbf{\uline{#1}}
+}{
+  \tcblower
+  \textbf{\thesection.\theformula}
+  \end{tcolorbox}
+}
+
+% Definition
+\newcounter{definition}[section]
+\newenvironment{definition}[1]{
+  \stepcounter{definition}
+  \begin{tcolorbox}[
+    standard jigsaw, % Allows opacity
+    colframe={\IfDarkModeTF{white}{black}},
+    boxrule=1px,
+    colback=black,
+    opacityback=0,
+    sharp corners,
+    coltext={\IfDarkModeTF{white}{black}}
+  ]
+  \textbf{#1 \hfill \thesection.\thedefinition}
+  \vspace{5px}
+  \hrule
+  \vspace{5px}
+  \noindent
+}{
+  \end{tcolorbox}
+}
+
+% Example Problem
+\newcounter{example}[section]
+\newenvironment{example}{
+  \stepcounter{example}
+  \begin{tcolorbox}[
+    standard jigsaw, % Allows opacity
+    colframe={\IfDarkModeTF{white}{black}},
+    boxrule=1px,
+    colback=black,
+    opacityback=0,
+    sharp corners,
+    coltext={\IfDarkModeTF{white}{black}}
+  ]
+  \textbf{Example \hfill \thesection.\theexample}
+  \vspace{5px}
+  \hrule
+  \vspace{5px}
+  \noindent
+}{
+  \end{tcolorbox}
+}
+
+\tikzset{
+  cubeBorder/.style=\IfDarkModeTF{white}{black},
+  cubeFilling/.style={\IfDarkModeTF{white!20!black}{black!20!white}, opacity=0.25},
+  gridLine/.style={very thin, gray},
+  graphLine/.style={-latex, thick, \IfDarkModeTF{white}{black}},
+}
+
+\pgfplotsset{
+  basicAxis/.style={
+    grid,
+    major grid style={line width=.2pt,draw=\IfDarkModeTF{white!50!black}{black!50!black}},
+    axis lines = box,
+    axis line style = {line width = 1px},
+  }
+}
+
+%%%% REFERENCES %%%%
+\usepackage{hyperref}
+
+\author{Ethan Anthony}

@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{All Quadrant Graph}
+\date{}
+
+\begin{document}
+\begin{tikzpicture}
+  % All Quadrants Graph
+  \def \xPosLen {5}
+  \def \xNegLen {5}
+  \def \yPosLen {5}
+  \def \yNegLen {5}
+  \def \xOrigin {0}
+  \def \yOrigin {0}
+  \pgfmathsetmacro \xpf {\xOrigin + \xPosLen}
+  \pgfmathsetmacro \xnf {\xOrigin - \xNegLen}
+  \pgfmathsetmacro \ypf {\yOrigin + \yPosLen}
+  \pgfmathsetmacro \ynf {\yOrigin - \yNegLen}
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xpf,\yOrigin) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xnf,\yOrigin) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xOrigin,\ypf) ;
+  \draw[graphLine] (\xOrigin,\yOrigin) -- (\xOrigin,\ynf) ;
+\end{tikzpicture}
+\end{document}
