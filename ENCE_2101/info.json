@@ -1,0 +1,23 @@
+{
+  "schedule": {
+    "start":        900,
+    "end":          1000,
+    "days":         "Mon Wed",
+    "labStart":     1200,
+    "labEnd":       1400,
+    "labDays":      "Mon Tue"
+  },
+
+  "name": {
+    "title":        "Digital Design",
+    "short":        "ENCE 2101",
+    "code":         "ENCE",
+    "number":       "2101"
+  },
+
+  "bookmarks": {
+    "Canvas Homepage":       "https://canvas.du.edu/"
+  },
+
+  "hasLab":         true
+}
