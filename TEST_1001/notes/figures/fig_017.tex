@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 017}
+\date{August 22, 2024}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \draw[draw=or!75!fg, ultra thick] (2,-2) circle (5pt) node[anchor = west, xshift = 10pt] {S-Wave};
+  \draw[draw=ma!75!fg, ultra thick] (2,-2.75) circle (5pt) node[anchor = west, xshift = 10pt] {P-Wave};
+
+  \foreach \x in {1,...,5} {
+    \pgfmathsetmacro{\rs}{(\x * (3.5)) / 10}
+    \draw[draw=or!75!fg, ultra thick] (-2,0) circle (\rs);
+  }
+  \foreach \x in {6,...,9} {
+    \pgfmathsetmacro{\rs}{(\x * (3.5)) / 10}
+    \draw[draw=or!75!fg, ultra thick, dotted] (-2,0) circle (\rs);
+  }
+
+  \foreach \x in {1,...,5} {
+    \pgfmathsetmacro{\rp}{(\x * (6.5)) / 10}
+    \draw[draw=ma!75!fg, ultra thick] (-2,0) circle (\rp);
+  }
+
+\end{tikzpicture}
+\end{document}

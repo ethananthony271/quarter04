@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, letterpaper]{article}
 
 \input{../../xlatex/imports/preamble}
 
@@ -25,13 +25,13 @@ the reference frame when describing an object and its properties.
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[H]{0.4\textwidth}
+  \begin{subfigure}[H]{0.45\textwidth}
     \centering
     \includestandalone{figures/fig_001}
     \caption{Position is at $x=2.5$}
     \label{fig:001}
   \end{subfigure}
-  \begin{subfigure}[H]{0.4\textwidth}
+  \begin{subfigure}[H]{0.45\textwidth}
     \centering
     \includestandalone{figures/fig_002}
     \caption{Position is at $x=5.5$}
@@ -40,6 +40,7 @@ the reference frame when describing an object and its properties.
   \caption{Different Reference Frames}
   \label{fig:refFrame}
 \end{figure}
+\vspace{-25pt}
 
 \subsection{Motion}
 
@@ -49,14 +50,18 @@ the reference frame when describing an object and its properties.
 \end{definition}
 
 Objects not only have position, but also experience motion. When an object undergoes motion,
-it is displaced. In Figure \ref{fig:003}, an object moved to the right (within our reference
-frame) from $x=4$ to $x=7$, resulting in a displacement of $\Delta x=3$. In Figure
-\ref{fig:004}, an object first moves from $x=5$ to $x=3$, then from $x=3$ to $x=7$, resulting
-in a final displacement of $\Delta x=2$.
+it is said to have been \textbf{displaced}.
+
+In Figure \ref{fig:003}, an object moved to the right (within our reference frame) from 
+$x=4$ to $x=7$, resulting in a displacement of $\Delta x=3$. In Figure \ref{fig:004}, an
+object first moves from $x=5$ to $x=3$, then from $x=3$ to $x=7$, resulting in a final
+displacement of $\Delta x=2$.
 
 \begin{definition}{Displacement}
-  An object's net \textbf{change in position}.
+  An object's \textbf{net} change in position.
 \end{definition}
+
+\vspace{-2pt}
 
 \begin{figure}[H]
   \centering
@@ -76,7 +81,7 @@ in a final displacement of $\Delta x=2$.
   \label{fig:subandsonic}
 \end{figure}
 
-\begin{wrapfigure}[10]{l}{0.4\textwidth}
+\begin{wrapfigure}[9]{l}{0.4\textwidth}
   \centering
   \includestandalone{figures/fig_005}
 \caption{Displacement displayed graphically}
@@ -86,18 +91,12 @@ in a final displacement of $\Delta x=2$.
 \newpage
 
 In Figure \ref{fig:005}, the position ($x$) of two objects is graphed over time ($t$).
-For object 1, its displacement is constantly changing throughout the entire time. However,
-for object 2, its displacement starts by increasing, then at $t=c$, its displacement starts
-decreasing until it ends with a negative displacement. For object 2, it maintains a
-constant speed throughout the entire time, but its velocity changes. This is because speed
-is a \textbf{scalar} measurement, while velocity is a \textbf{vector} meaning that speed
-measures \textbf{magnitude} while velocity measures both \textbf{magnitude and direction}.
+Both objects maintain a constant \textbf{speed}, but only Object 1 maintains a constant
+velocity while Object 2 starts with a positive velocity, then changes to a negative velocity.
 
-\vspace{12pt}
-\hrule
-\vspace{12pt}
-
-How can speed and velocity be quantitatively represented? Through equations!
+This is because speed is a \textbf{scalar} measurement measuring only a magnitude. On the
+other hand, velocity is a \textbf{vector} measurement, measuring both a magnitude and a
+direction.
 
 \begin{formula}{Speed and Velocity}
   \begin{align*}
@@ -112,12 +111,9 @@ How can speed and velocity be quantitatively represented? Through equations!
   \end{align*}
 \end{formula}
 
-
-\newpage
-
 \subsection{Acceleration}
 
-\begin{wrapfigure}{l}{0.45\textwidth}
+\begin{wrapfigure}[11]{l}{0.45\textwidth}
   \centering
   \includestandalone{figures/fig_006}
   \caption{Instantaneous vs. Average Velocity}
@@ -125,15 +121,18 @@ How can speed and velocity be quantitatively represented? Through equations!
 \end{wrapfigure}
 
 There is also a difference between an instantaneous value and an average value. In Figure
-\ref{fig:006}, the average velocity of the object is represented by the dotted line,
-showing a slow and negative average velocity. However, from the start to point $A$, the
-velocity is fast and positive; from point $A$ to point $B$, the velocity is fast and
-negative; and from point $B$ to point $C$, the velocity is slow and positive.
+\ref{fig:006}, the \textbf{average velocity} of the object is represented by the dotted line,
+showing a slow and negative average velocity.
+
+However, from the start to point $A$, the velocity is fast and positive; from point $A$ to
+point $B$, the velocity is fast and negative; and from point $B$ to point $C$, the velocity
+is slow and positive. At any point from $A$ to $B$, the \textbf{instantaneous velocity} would be
+fast and positive.
 
 \begin{definition}{Instantaneous vs. Average}
   Instantaneous measures a value at a \textbf{single point} in time the same way calculus
-  is used to find the slope of a function at a single point. Average measures the mean
-  value over a period of time.
+  is used to find the slope of a function at a single point. Average measures the
+  \textbf{mean value} over a period of time.
 \end{definition}
 
 \end{document}

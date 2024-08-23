@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 015}
+\date{August 22, 2024}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \filldraw[fill=ma!50, draw=ma!50] (0,3.75) circle (5pt);
+  \draw[draw=bl!50!fg, dashed, -stealth, thick] (0,3.75) -- (2,3.75) node[bl!50!fg, anchor = west] {$a$};
+  \foreach \x in {1,...,5} {
+    \pgfmathsetmacro{\y}{3.75 - (\x * 0.75)}
+    \pgfmathsetmacro{\yv}{3.75 - (\x * 0.75) + 0.1}
+    \pgfmathsetmacro{\ya}{3.75 - (\x * 0.75) - 0.1}
+    \draw[draw=or!50!fg, dashed, -stealth, thick] (0,\yv) -- (\x,\yv) node[or!50!fg, anchor = west, yshift = 2pt] {$v_\x$};
+    \draw[draw=bl!50!fg, dashed, -stealth, thick] (0,\ya) -- (2,\ya) node[bl!50!fg, anchor = west, yshift = -2pt] {$a$};
+    \filldraw[fill=ma!50, draw=ma!50] (0,\y) circle (5pt);
+  }
+
+\end{tikzpicture}
+\end{document}
