@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\input{../../../xlatex/imports/preamble}
+
+\title{Figure 018}
+\date{August 25, 2024}
+
+\begin{document}
+\begin{tikzpicture}[scale = 0.75]
+
+  \draw[draw=fg!20!bg] (-1,-11) grid (6.5,0);
+  \draw[draw=white, thick] (-1,-11) rectangle (6.5,0);
+
+  \foreach \t in {2,...,10} {
+    \pgfmathsetmacro{\y}{-1 * (0.1 * \t * \t)}
+    \pgfmathsetmacro{\x}{0.5 + (\t * 0.5)}
+    \filldraw[fill=or!50!fg, draw=or!50!fg] (\x,\y) circle (5pt);
+  }
+
+  \foreach \t in {2,...,10} {
+    \pgfmathsetmacro{\y}{-1 * (0.1 * \t * \t)}
+    \filldraw[fill=ma!50!fg, draw=ma!50!fg] (0,\y) circle (5pt);
+  }
+
+\end{tikzpicture}
+\end{document}
